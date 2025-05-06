@@ -9,9 +9,10 @@ Você tem `N` vinhos alinhados em uma prateleira. O preço do `i`-ésimo vinho �
 
 ---
 
-#### **4. Implementação (Bottom-Up)**
+#### **Implementação Bottom-Up**
 ```python
 import random
+import sys
 
 def profit(prices):
     n = len(prices)
@@ -48,9 +49,11 @@ def profit(prices):
 
     return dp, order
 
+# Uso: python3 bottomup.py <menor-valor> <maior-valor> <quantidade-de-itens>
 if __name__ == "__main__":
     n = 3
-    prices = [random.randint(1, 5) for _ in range(n)]
+
+    prices = [random.randint(int(sys.argv[1]), int(sys.argv[2])) for _ in range(int(sys.argv[3]))]
     
     print("Preços gerados: ", prices)
     
@@ -67,7 +70,7 @@ if __name__ == "__main__":
 ---
 
 ### **Análise de Complexidade**
-- **Tempo:** \(O(N^2)\) – Preenchemos uma tabela \(N \times N\).  
-- **Espaço:** \(O(N^2)\) – Armazenamos a tabela `dp`.
+- **Tempo:** O(N^2) – Preenchemos uma tabela \(N x N\).  
+- **Espaço:** O(N^2) – Armazenamos a tabela `dp`.
 
 ---
