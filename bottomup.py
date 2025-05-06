@@ -1,4 +1,5 @@
 import random
+import sys
 
 def profit(prices):
     n = len(prices)
@@ -35,9 +36,11 @@ def profit(prices):
 
     return dp, order
 
+# Uso: python3 bottomup.py <menor-valor> <maior-valor> <quantidade-de-itens>
 if __name__ == "__main__":
     n = 3
-    prices = [random.randint(1, 5) for _ in range(n)]
+
+    prices = [random.randint(int(sys.argv[1]), int(sys.argv[2])) for _ in range(int(sys.argv[3]))]
     
     print("Preços gerados: ", prices)
     
