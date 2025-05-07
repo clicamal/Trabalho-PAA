@@ -142,6 +142,6 @@ if __name__ == "__main__":
 
 ### **Análise de Complexidade**
 - **Tempo:** O(N^2) – Preenchemos uma tabela \(N x N\).  
-- **Espaço:** O(N^2) + O(N) – Armazenamos a tabela `dp`.
+- **Espaço:** O(N^2) – Armazenamos a tabela `dp`.
 
 ---
